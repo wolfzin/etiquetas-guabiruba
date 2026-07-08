@@ -13,13 +13,13 @@ const CONFIG = {
   // Dois números de WhatsApp. "numero": só dígitos (país + DDD + número).
   // "rotulo": texto que aparece no botão (ex.: setor ou unidade).
   whatsapps: [
-    { rotulo: "WhatsApp Comercial",  numero: "5547999999999" },
-    { rotulo: "WhatsApp Orçamentos", numero: "5547988888888" },
+    { rotulo: "WhatsApp Produção  ",  numero: "5547992317571" },
+    { rotulo: "WhatsApp Orçamentos", numero: "5547999408590" },
   ],
 
   // Dois e-mails da empresa
   emails: [
-    "contato@etiquetasguabiruba.com.br",
+    "produção@etiquetasguabiruba.com.br",
     "vendas@etiquetasguabiruba.com.br",
   ],
 };
