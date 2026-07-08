@@ -1,5 +1,0 @@
-# Troque o domínio pelo endereço real ao publicar
-User-agent: *
-Allow: /
-
-Sitemap: https://www.etiquetasguabiruba.com.br/sitemap.xml
