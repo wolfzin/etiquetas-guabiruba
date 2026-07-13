@@ -10,11 +10,10 @@ const CONFIG = {
   // Mensagem automática enviada ao abrir o WhatsApp
   mensagem: "Olá! Vim pelo site da Etiquetas Guabiruba e gostaria de solicitar um orçamento.",
 
-  // Dois números de WhatsApp. "numero": só dígitos (país + DDD + número).
-  // "rotulo": texto que aparece no botão (ex.: setor ou unidade).
+  // Número de WhatsApp. "numero": só dígitos (país + DDD + número).
+  // "rotulo": texto que aparece no botão.
   whatsapps: [
-    { rotulo: "WhatsApp Produção  ",  numero: "5547992317571" },
-    { rotulo: "WhatsApp Orçamentos", numero: "5547999408590" },
+    { rotulo: "WhatsApp vendas", numero: "5547999408590" },
   ],
 
   // Dois e-mails da empresa
@@ -22,6 +21,12 @@ const CONFIG = {
     "produção@etiquetasguabiruba.com.br",
     "vendas@etiquetasguabiruba.com.br",
   ],
+
+  // Instagram da empresa
+  instagram: {
+    rotulo: "@etiquetasguabiruba",
+    url: "https://www.instagram.com/etiquetasguabiruba",
+  },
 };
 
 /* ======================================================================= */
@@ -84,6 +89,16 @@ function montarContatos() {
     if (!email) { el.closest("li")?.remove(); return; }
     el.href = `mailto:${email}`;
     el.textContent = email;
+  });
+
+  // Instagram
+  document.querySelectorAll(".js-instagram").forEach((el) => {
+    const ig = CONFIG.instagram;
+    if (!ig || !ig.url) { el.closest("li")?.remove(); return; }
+    el.href = ig.url;
+    el.target = "_blank";
+    el.rel = "noopener";
+    el.textContent = ig.rotulo;
   });
 }
 
